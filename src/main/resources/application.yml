@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@192.168.56.1:1521:orcl
+    username: traderV0
+    password: traderV0
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        #     show_sql: true
+        format_sql: true
+  data:
+    web:
+      pageable:
+        default-page-size: 10
+        max-page-size: 2000
+
+#trace < debug < info < warn < error
+logging.level:
+  root:  warn
+#  org.hibernate.SQL: debug
+#  org.hibernate.type: trace
